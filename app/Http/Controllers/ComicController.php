@@ -15,12 +15,15 @@ class ComicController extends Controller
     }
 
     // metodo che recupera il singolo record
-    public function show($id){
+    public function show($slug){
         // con il metodo find conviene passare il parametro id
-        $comic = Comic::find($id);
+        // $comic = Comic::find($id);
+
+        //devo passare lo slug come parametro della funzione -> filtraggio
+        $comic = Comic::where('slug', $slug)->get();
 
         $single_comic = [
-            'single_comic' => $comic
+            'single_comic' => $comic[0]
         ];
         
         // chiave che andrò a richiamare nella pagina di riferimento nella view

@@ -10,7 +10,7 @@
             @foreach ($comics as $comic)
             <div class="card">
                     {{-- tra parentesi quadre metto il nome del parametro con il relativo valore --}}
-                    <a href="{{ route( 'detail', ['id' => $comic['id']] ) }}">
+                    <a href="{{ route( 'detail', ['slug' => $comic['slug']] ) }}">
                         <div class="card-image">
                             <img src="{{$comic['thumb']}}" alt="">
                         </div>
