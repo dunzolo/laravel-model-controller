@@ -7,10 +7,10 @@
     <div class="container">
         <span class="top-label-light-blue">Current series</span>
         <div class="row">
-            @foreach ($comics as $key => $comic)
-                {{-- tra parentesi quadre metto il nome del parametro con il relativo valore --}}
-                <div class="card">
-                    <a href="/comics/{{$key}}">
+            @foreach ($comics as $comic)
+            <div class="card">
+                    {{-- tra parentesi quadre metto il nome del parametro con il relativo valore --}}
+                    <a href="{{ route( 'detail', ['id' => $comic['id']] ) }}">
                         <div class="card-image">
                             <img src="{{$comic['thumb']}}" alt="">
                         </div>
