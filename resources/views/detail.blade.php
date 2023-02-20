@@ -46,11 +46,11 @@
                     <tbody>
                       <tr>
                         <td class="caption"><strong>Art by:</strong></td>
-                        <td><a href="#">{{implode(', ', $single_comic['artists'])}}</a></td>
+                        <td><a href="#">{{ $single_comic['artists'] }}</a></td>
                       </tr>
                       <tr>
                         <td class="caption"><strong>Written by:</strong></td>
-                        <td><a href="#">{{implode(', ', $single_comic['writers'])}}</a></td>
+                        <td><a href="#">{{ $single_comic['writers'] }}</a></td>
                       </tr>
                     </tbody>
                 </table>

@@ -15,29 +15,9 @@ use App\Http\Controllers\ComicController as ComicController;
 |
 */
 
-// Route::get('/', function () {
-//     $comics = config('comics');
-//     return view('comics', compact('comics'));
-// })->name('comics');
-
 Route::get('/', [ComicController::class,'index'])->name('comics');
 
 Route::get('/comics/{id}', [ComicController::class, 'show'])->name('detail');
-
-
-// Route::get('/comics/{param}', function($param){
-//     $comics = config('comics');
-
-//     $single_comic = '';
-//     foreach($comics as $key => $comic){
-//         if($key == $param){
-//             $single_comic = $comic;
-//         }
-//     }
-
-//     return view('detail', compact('single_comic'));
-
-// })->name('detail');
 
 Route::get('/characters', function () {
     return view('characters');
